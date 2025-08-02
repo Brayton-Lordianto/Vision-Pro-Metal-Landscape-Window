@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import simd
 
 /// Maintains app-wide state
 @MainActor
@@ -18,4 +19,5 @@ class AppModel {
         case open
     }
     var immersiveSpaceState = ImmersiveSpaceState.closed
+    var lookDir = vector_float3(0.0, 2.0, -90.0)
 }

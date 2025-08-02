@@ -34,12 +34,14 @@ typedef NS_ENUM(EnumBackingType, VertexAttribute)
 typedef NS_ENUM(EnumBackingType, TextureIndex)
 {
     TextureIndexColor    = 0,
+    TextureIndexCompute  = 1,
 };
 
 typedef struct
 {
     matrix_float4x4 projectionMatrix;
     matrix_float4x4 modelViewMatrix;
+    vector_float3 lookDir;
 } Uniforms;
 
 typedef struct

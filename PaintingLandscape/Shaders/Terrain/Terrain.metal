@@ -6,8 +6,8 @@
 //
 
 #include "Terrain.h"
-#include "StandardLib.h"
-#include "ShaderDefines.h"
+#include "../Shared/StandardLib.h"
+#include "../Shared/ShaderDefines.h"
 
 // MARK: terrain definition functions
 // accepts XZ in grid space

@@ -10,8 +10,8 @@
 
 #include <metal_stdlib>
 #include <simd/simd.h>
-#include "StandardLib.h"
-#include "ShaderDefines.h"
+#include "../Shared/StandardLib.h"
+#include "../Shared/ShaderDefines.h"
 
 using namespace metal;
 

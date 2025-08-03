@@ -7,12 +7,11 @@
 #include <metal_stdlib>
 #include <simd/simd.h>
 
-// Including header shared between this Metal shader code and Swift/C code executing Metal API commands
-#import "ShaderTypes.h"
-#include "StandardLib.h"
-#include "PostProcessing.h"
-#include "Terrain.h"
-#include "RayMarching.h"
+#import "../ShaderTypes.h"
+#include "Shared/StandardLib.h"
+#include "PostProcessing/PostProcessing.h"
+#include "Terrain/Terrain.h"
+#include "RayMarching/RayMarching.h"
 
 using namespace metal;
 

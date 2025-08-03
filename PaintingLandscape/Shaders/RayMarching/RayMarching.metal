@@ -6,7 +6,7 @@
 //
 
 #include "RayMarching.h"
-#include "Terrain.h"
+#include "../Terrain/Terrain.h"
 
 Ray::Ray(float3 origin, float3 direction, float minT, float maxT)
     : origin(origin), direction(direction), inverseDirection(1.0 / direction), minT(minT), maxT(maxT) {}

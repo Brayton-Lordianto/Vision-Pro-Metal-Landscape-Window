@@ -6,7 +6,7 @@
 //
 
 #include "PostProcessing.h"
-#include "StandardLib.h"
+#include "../Shared/StandardLib.h"
 
 // MARK: post processing
 float3 colorCorrection(float3 color) {

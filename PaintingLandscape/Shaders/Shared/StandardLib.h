@@ -14,13 +14,24 @@
 using namespace metal;
 
 // MARK: STANDARD METHODS
+// Template Implementations must be here!
 template<typename F>
-F bilinear_interpolation(F a, F b, F c, F d, float2 ij);
+F bilinear_interpolation(F a, F b, F c, F d, float2 ij) {
+    F i0 = mix(a, b, ij.x), i1 = mix(c, d, ij.x); // lerp in i
+    return mix(i0, i1, ij.y); // lerp in j
+}
 
 // 3t^2 - 2t^3
-template<typename F> F s_curve_1_continous(F t); // cubic continous
+template<typename F>
+F s_curve_1_continous(F t) {
+    return t * t * (3.0 - 2.0 * t); // cubic continous
+}
+
 // 6t^5 - 15t^4 + 10t^3
-template<typename F> F s_curve_2_continous(F t); // quintic continous
+template<typename F>
+F s_curve_2_continous(F t) {
+    return t * t * t * (t * (t * 6.0 - 15.0) + 10.0); // quintic continous
+}
 
 float3 gammaCorrection(float3 color, float gammaFactor = 0.4545);
 

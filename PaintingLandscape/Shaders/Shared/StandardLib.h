@@ -13,8 +13,14 @@
 
 using namespace metal;
 
-// MARK: STANDARD METHODS
-// Template Implementations must be here!
+// Template Implementations must be defined in header file!
+/// HASHING
+float hash(float2 p);
+
+// TODO: FRACTAL BASED NOISE
+/// END
+
+/// SPLINES
 template<typename F>
 F bilinear_interpolation(F a, F b, F c, F d, float2 ij) {
     F i0 = mix(a, b, ij.x), i1 = mix(c, d, ij.x); // lerp in i
@@ -32,11 +38,9 @@ template<typename F>
 F s_curve_2_continous(F t) {
     return t * t * t * (t * (t * 6.0 - 15.0) + 10.0); // quintic continous
 }
-
+/// LIGHTING
 float3 gammaCorrection(float3 color, float gammaFactor = 0.4545);
-
-float hash(float2 p);
-
+/// STANDARD CAMERA
 struct Camera {
     float3 position;
     float3 target;

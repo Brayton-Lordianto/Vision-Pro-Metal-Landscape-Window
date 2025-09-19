@@ -15,7 +15,8 @@ using namespace metal;
 
 // accepts XZ in grid space
 // returns height in [-1, 1]
-float normalizedTerrainHeight(float2 XZ);
+float normalizedTerrainNoise(float2 XZ);
+float normalizedTerrainHeight(float2 XZ, float roughness); // a simple FBM noise function in context of a terrain 
 
 // accepts XZ in world space
 // returns in range [0, 1200]
